@@ -1,0 +1,153 @@
+/* ==========================================================================
+   Institucional
+   ========================================================================== */
+
+body.institucional {
+	.sidebar {
+		margin-top: 10%;
+
+		@include mq($screen-md) {
+			margin-top: 4%;
+		}
+
+		nav {
+			ul {
+				li {
+					margin-bottom: 15px;
+
+					a {
+						@include font-size(1.8);
+						color: #000;
+						text-decoration: none;
+
+						&:hover{
+							text-decoration: underline;
+						}
+					}
+
+					&.active {
+						a{
+							font-weight: 900;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.content{
+		margin-top: 10%;
+		margin-bottom: 5%;
+
+		@include mq($screen-md) {
+			margin-top: 4%;
+		}
+
+		h2{
+			@include font-size(3);
+			font-weight: 400;
+			border-bottom: 1px solid #9e9ea6;
+			line-height: 40px;
+			margin-bottom: 20px;
+		}
+
+		p{
+			@include font-size(1.4);
+			margin-bottom: 20px;
+			line-height: 20px;
+		}
+	}
+}
+
+body.fale-conosco{
+	.content{
+		padding-left: 5%;
+
+		#contactForm{
+			form{
+				margin-top: 20px;
+				overflow: hidden;
+
+				.form-field{
+					margin-bottom: 20px;
+
+					label{
+						@include font-size(1.4);
+						width: 30%;
+						display: inline-block;
+						vertical-align: top;
+					}
+
+					input, select, textarea{
+						@include font-size(1.4);
+						display: inline-block;
+						width: 70%;
+						vertical-align: top;
+						padding: 5px;
+					}
+
+					textarea{
+						resize: none;
+					}
+
+					&.submit{
+						input{
+							@extend .transition;
+							float: right;
+							background-color: #e6e6e6;
+							border: 1px solid #e6e6e6;
+							width: 175px;
+							height: 38px;
+							cursor: pointer;
+							text-transform: lowercase;
+							color: #000;
+							display: block;
+							font-weight: bolder;
+
+							&:hover{
+								background-color: #fff;
+								border: 1px solid #000;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+body.nossas-lojas{
+	.lojas-tlt{
+		@include font-size(3);
+        border-bottom: 1px solid #000;
+        line-height: 45px;
+        margin-bottom: 30px;
+        font-weight: 400;
+	}
+
+	.nossas-lojas{
+		clear: both;
+		margin-bottom: 5%;
+		overflow: hidden;
+
+		ul{
+			li{
+				text-align: center;
+				margin-bottom: 30px;
+
+				img{
+					width: 250px;
+					height: 172px;
+					display: block;
+					margin: 0 auto 10px;
+				}
+
+				p{
+					@include font-size(1.4);
+					line-height: 20px;
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}

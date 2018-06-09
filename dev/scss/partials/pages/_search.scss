@@ -1,0 +1,329 @@
+/* ==========================================================================
+   Página de Busca, Categorias e Departamentos
+   ========================================================================== */
+
+body.dep-cat-bus {
+	.banner-departament {
+		overflow: hidden;
+
+		.box-banner {
+			img {
+			    height: auto;
+			    margin-bottom: 10px;
+			    width: 100%;
+			}
+		}
+	}
+
+	.mainShelf {
+		.sub,
+		.pager.top,
+		.searchResultsTime {
+			display: none;
+		}
+
+		.pager.bottom {
+			display: block;
+			margin: 5% 0 0;
+			text-align: center;
+
+			ul {
+				li {
+					@include font-size(1.2);
+					color: #000;
+					padding: 15px;
+					line-height: 5px;
+					font-weight: bold;
+					text-align: center;
+					display: inline-block;
+					margin: 0 10px 10px 0;
+					border: 1px solid #000;
+					width: auto;
+
+					&:hover,
+					&.pgCurrent {
+						@extend .transition;
+						color: #fff;
+						background-color: #000;
+						border: 1px solid #000;
+					}
+
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+		}
+
+		.sidebar {
+			.menu-navegue {
+				display: none;
+			}
+
+			.search-multiple-navigator,
+			.search-single-navigator {
+				margin: 25px 10px;
+				border-bottom: 1px solid #000;
+				line-height: 25px;
+				position: relative;
+				display: block;
+
+				@include mq($screen-md) {
+				    margin: 100px 0 0 0 !important;
+				}
+
+				h3, h4, input {
+					display: none;
+				}
+
+				&:before {
+					@include font-size(3);
+					display:block;
+					color: #000;
+					content: 'Filtros';
+					padding-bottom: 10px;
+					font-weight: 900;
+					margin: 10px auto;
+					text-align: center;
+
+					@include mq($screen-md) {
+					@include font-size(3);
+					display: inline-block;
+					color: #000;
+					content: 'Filtros';
+					margin-bottom: 10px;
+					padding-bottom: 10px;
+					font-weight: 900;
+					margin-right: 12%;
+					}
+				}
+
+				.bt-refinar {
+					display: none;
+				}
+
+
+				h5 {
+					@include font-size(1.4);
+					text-transform: uppercase;
+					color: #605f5f;
+					font-weight: 500;
+					cursor: pointer;
+
+
+					&:after{
+						content: "+";
+						font-size: 25px;
+						float: right;
+					}
+
+
+					&:last-of-type{
+						&:after{
+							content: none;
+						}
+					}
+				}
+
+				ul{
+					display: none;
+				    z-index: 99999;
+				    overflow: hidden;
+				    width: 100%;
+				    text-align: left;
+
+					@include mq($screen-md) {
+						top: 40px;
+					}
+
+					&.active{
+						display: block;
+					}
+
+					li{
+						@include font-size(1.4);
+						list-style-type: none;
+						line-height: 30px;
+						display: block;
+						margin: 5px 0 5px 0;
+						font-weight: 600;
+						
+						a{
+							color: #000;
+							text-decoration: none;
+							cursor: pointer;
+						}
+
+						&:hover{
+							text-decoration: underline;
+						}
+
+						&.sr_selected{
+							font-weight: bold;
+						}
+					}
+				}
+
+				.ver-filtros {
+				    color: #000;
+				    font-weight: bolder;
+				    text-decoration: none;
+				}
+			}
+		}
+
+		.filter{
+			background-color: #e8e4e1;
+			padding: 10px;
+			width: 100%;
+			overflow: hidden;
+			text-align: center;
+				span{
+					@include font-size(2.0);
+					    font-weight: 500;
+					    display: block;
+					    text-align: center;
+					    margin-bottom: 15px;
+				}
+
+				ul{
+					line-height: 35px;
+					li{
+						display: inline-block;
+						margin-right: 25px;
+						a{
+							@include font-size(1.7);
+						    color: #605f5f;
+						    font-weight: 500;
+
+						    &:hover{
+						    	font-weight: 700;
+						    	color: #000;
+						    }
+						}
+					}
+				}
+
+			@include mq($screen-md) {
+				background-color: #e8e4e1;
+				padding: 10px;
+				width: 75%;
+				float: left;
+
+				span{
+					@include font-size(2.0);
+					float: left;
+					padding-right: 10px;
+					padding-left: 20px;
+					font-size: 20px;
+					font-weight: 500;
+				}
+				ul{
+					line-height: 24px;
+					li{
+						display: inline-block;
+						margin-right: 25px;
+						a{
+							@include font-size(1.5);
+						    color: #605f5f;
+						    font-weight: 500;
+
+						    &:hover{
+						    	font-weight: 700;
+						    	color: #000;
+						    }
+						}
+					}
+				}
+			}
+		}
+		.order{
+			text-align: center;
+
+			@include mq($screen-md) {
+
+			}
+
+			.orderBy{
+				label, select{
+					@include font-size(1.2);
+					font-family: 'Raleway', sans-serif;
+					text-transform: lowercase;
+				}
+
+				select{
+					padding: 8px;
+				}
+			}
+		}
+
+		.produtos-shelf{
+			clear: both;
+			margin: 2% 0 5%;
+
+			ul{
+				li{
+					display: inline-block;
+					width: 50%;
+
+				    @include mq($screen-sm) {
+						display: inline-block;
+						vertical-align: top;
+				    	width: 50%;
+				    }
+
+				    @include mq($screen-md) {
+				    	width: 25%;
+				    }
+				}
+			}
+		}
+	}
+
+	.about-department{
+		margin-bottom: 4%;
+
+		article{
+			@include font-size(1.4);
+			background-color: #f5f5f5;
+			padding: 20px;
+			text-align: center;
+			overflow: hidden;
+			margin: 0 10px;
+
+			@include mq($screen-md) {
+				margin: 0;
+			}
+
+			h3{
+				font-weight: bolder;
+			}
+
+			p{
+				display: block;
+				margin: 10px 0;
+
+				@include mq($screen-md) {
+					padding: 0 6%;
+				}
+			}
+		}
+	}
+}
+
+body.busca-vazia .didyoumean{
+	font-size: 20px;
+}
+
+.custum-buscavazia p{
+	font-size: 15px;
+    text-align: center;
+    margin: 10px auto;
+    line-height: 15px;
+    font-weight: bold;
+}
+
+body.busca-vazia .tlt-padrao{
+    line-height: 50px;
+    text-align: center;
+}

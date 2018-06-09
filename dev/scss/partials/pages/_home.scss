@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Homepage
+   ========================================================================== */
+
+body.home {
+
+	main {
+		section{
+			clear: both;
+			overflow: hidden;
+		}
+
+		.slider-main{
+			margin-bottom: 10px;
+		}
+
+		.tipbar{
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+
+		.banners-secundarios, 
+		.banners-terciarios{
+			.box-banner {
+				margin-bottom: 5px;
+
+				@include mq($screen-md) {
+					margin-bottom: 0;
+				}
+
+				img {
+				    height: auto;
+				    width: 100%;
+				}
+			}
+			
+		.banner-sec{
+			width: 50%;
+			height: auto;
+				img{
+					width: 100% !important;
+					height: auto !important;
+				}
+			@include mq($screen-md) {
+		    width: 25% !important;
+			height: auto !important;
+				img{
+					width: 100% !important;
+					height: auto !important;
+				}
+			}
+		}
+
+			.banner-terc{
+				width: 100%;
+				height: auto;
+				@include mq($screen-md) {
+			    width: 33.3%;
+				height: auto;
+				}
+			}
+		}
+
+		.banners-secundarios{
+			margin: 15px 0 5px;
+
+			@include mq($screen-md) {
+				margin: 15px 0 10px;
+			}
+		}
+
+		.banner-ult-one,
+		.banner-ult-two{
+		.box-banner{
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+
+		.destaque-shelf{
+			margin: 3% 10px;
+
+			@include mq($screen-md) {
+				margin: 3% 0;
+			}
+
+			.prateleira{
+				h2{
+					display: none;
+				}
+
+				.slick-prev {
+					display: block;
+				    left: 10px;
+				    top: 140px;
+				    position: absolute;
+				    border: none;
+
+			    	&::after{
+					    content: ">";
+					    position: absolute;
+					    font-size: 38px;
+					    color: #000;
+					    font-family: monospace;
+			    	}
+
+			    	@include mq($screen-md) {
+						display: block;
+					    left: 10px;
+					    top: 140px;
+					    position: absolute;
+					    border: none;
+
+			    	&::after{
+					    content: ">";
+					    position: absolute;
+					    font-size: 38px;
+					    color: #000;
+					    font-family: monospace;
+			    		}
+			    	}
+				}
+
+				.slick-next {
+				    position: absolute;
+				    right: 10px;
+				    top: 140px;
+				    border:none;
+
+		    		&::after{
+					    content: ">";
+					    position: absolute;
+					    font-size: 38px;
+					    color: #000;
+					    font-family: monospace;
+					}
+
+			    	@include mq($screen-md) {
+					    position: absolute;
+					    right: 10px;
+					    top: 140px;
+					    border:none;
+
+		    		&::after{
+					    content: ">";
+					    position: absolute;
+					    font-size: 38px;
+					    color: #000;
+					    font-family: monospace;
+						}
+			    	}
+				}
+			}
+		}
+
+		.destaque-shelf.desk{
+			.prateleira{
+				ul{
+					li{
+						display: inline-block;
+						vertical-align: top;
+						width: 25%;
+					}
+				}
+			}
+		}
+
+		.about{
+			background: url(/arquivos/iniciais-logo.png) 95% center no-repeat #ececec;
+		    display: block;
+		    padding: 10% 3% 6%;
+
+		    @include mq($screen-md) {
+		    	padding: 3% 0 2%;
+		    }
+
+			article{
+				h2{
+					@include font-size(2.5);
+					margin-bottom: 15px;
+
+					@include mq($screen-md) {
+						@include font-size(3);
+					}
+
+					strong{
+						font-weight: 900;
+					}
+				}
+
+				p{
+					@include font-size(1.2);
+					line-height: 20px;
+					margin-bottom: 15px;
+
+					@include mq($screen-md) {
+						@include font-size(1.4);
+					}
+				}
+			}
+		}
+	}
+}
+

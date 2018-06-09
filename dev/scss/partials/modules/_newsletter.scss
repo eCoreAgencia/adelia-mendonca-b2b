@@ -1,0 +1,50 @@
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+
+section.newsletter {
+	overflow: hidden;
+	margin-top: 27px;
+	text-align: center;
+	padding: 20px 0 10px 0;
+	background-color: #F165A4;
+
+	.news-box {
+		margin-bottom: 10px;
+
+		h3 {
+			@include font-size(3);
+			color: #fff;
+			font-weight: 400;
+			margin-bottom: 17px;
+			vertical-align: top;
+			display: inline-block;
+			text-transform: uppercase;
+		}
+
+		form {
+			margin-left: 10px;
+			position: relative;
+			vertical-align: top;
+			display: inline-block;
+
+			input {
+
+			}
+
+			button {
+				top: 5px;
+				right: 10px;
+				font-style: italic;
+				position: absolute;
+				text-transform: lowercase;
+
+				&:before {
+					content: '//';
+					margin-right: 10px;
+					display: inline-block;
+				}
+			}
+		}
+	}
+}

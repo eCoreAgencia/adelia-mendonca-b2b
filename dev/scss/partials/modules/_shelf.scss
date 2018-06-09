@@ -1,0 +1,189 @@
+.shelf {
+	.pager{
+		display: none !important;
+	}
+}
+.prateleira{
+
+	.pager{
+		display: none !important;
+	}
+	ul{
+		li{
+			@extend .transition;
+			border: 1px solid #fff;
+			padding: 20px 0;
+			list-style-type: none;
+			position: relative;
+
+			span.principal {
+				@extend .transition;
+			}
+
+			&:hover {
+				span.principal {
+					@extend .transition;
+					opacity: 0;
+				}
+				span.secundario {
+					@extend .transition;
+					opacity: 1;
+				}
+			}
+
+			span.secundario {
+				@extend .transition;
+				top: 20px;
+				opacity: 0;
+				width: 100%;
+				position: absolute;
+				right: 0;
+			}
+
+			&:hover{
+				border: 1px solid #000;
+				h3{
+					color: #000;
+				}
+			}
+
+			a.productShelf{
+				text-decoration: none;
+
+				img{
+					display: block;
+					margin: 0 auto;;
+					height: auto;
+					width: 100%;
+					max-width: 210px;
+				}
+			}
+
+			article{
+				h3{
+					@include font-size(1.4);
+					text-align: center;
+					color: #fff;
+					font-weight: 500;
+					line-height: 18px;
+					margin-bottom: 20px;
+					height: 36px;
+					overflow: hidden;
+					padding: 0 20px;
+				}
+
+				.outOfStock{
+					text-align: center;
+					color: red;
+					display: block;
+				}
+
+				.oldPrice,
+				.bestPrice,
+				.installment,
+				.a-vista,
+				.discount-price{
+					font-family: arial;
+					display: block;
+					text-align: center;
+					color: #000;
+					font-weight: bold;
+				}
+
+				.installment{
+					@include font-size(1.4);
+				}
+
+				.oldPrice{
+					@include font-size(1.4);
+					display: block;
+				}
+
+				.bestPrice{
+					@include font-size(1.4);
+					font-weight: bold;
+					line-height: 30px;
+					display: none;
+				}
+
+				.a-vista{
+					@include font-size(1.2);
+					font-weight: bold;
+					margin-bottom: 20px;
+				}
+
+				.discount-price{
+					@include font-size(1.8);
+					font-weight: bold;
+					display: block;
+					text-align: center;
+					margin: 10px 0;
+
+					&:after{
+						@include font-size(1.2);
+						content: "à vista";
+						display: block;
+						font-weight: bold;
+						line-height: 20px;
+					}
+				}
+			}
+
+			.action-button{
+				a.look-product{
+					@include font-size(1.6);
+					text-decoration: none;
+					background-color: #23c46a;
+					border: 1px solid #23c46a;
+					width: 125px;
+					height: 38px;
+					cursor: pointer;
+					text-transform: lowercase;
+					color: #fff;
+					display: block;
+					margin: 0 auto;
+					font-weight: 600;
+					text-align: center;
+					padding-top: 7px;
+					@include mq($screen-md) {
+					@include font-size(1.6);
+					text-decoration: none;
+					background-color: #23c46a;
+					border: 1px solid #23c46a;
+					width: 175px;
+					height: 38px;
+					cursor: pointer;
+					text-transform: lowercase;
+					color: #fff;
+					display: block;
+					margin: 0 auto;
+					font-weight: 600;
+					text-align: center;
+					padding-top: 7px;
+
+					&:hover{
+						background-color: #058b40;
+						border: 1px solid #058b40;
+						color: #fff;
+					}
+				}
+					svg{
+						display: inline-block;
+						vertical-align: middle;
+						margin-right: 5px;
+					}
+
+					span{
+						display: inline-block;
+						vertical-align: middle;
+					}
+				}
+			}
+
+			.flag-discount, 
+			.flag-discount-2{
+				display: none;
+			}
+		}
+	}
+}
