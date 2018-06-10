@@ -18,14 +18,14 @@ $screen-md-max: ($screen-lg - 1);
    Grid
    ========================================================================== */
 
-$container-max-width: 1200px;
+$container-max-width: 1900px;
 $grid-columns: 12;
 $grid-gutter-width: 14px;
 $grid-float-breakpoint: $screen-sm-min;
 $grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 .container {

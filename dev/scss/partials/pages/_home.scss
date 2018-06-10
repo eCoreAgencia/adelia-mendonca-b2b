@@ -2,207 +2,304 @@
    Homepage
    ========================================================================== */
 
-body.home {
+body {
+	&.homeb2b-adelia {
+		background: url(/arquivos/bg-home-b2b.png) no-repeat scroll 0 139px transparent;
+		background-size: contain;
 
-	main {
-		section{
-			clear: both;
-			overflow: hidden;
+		.hidden-box {
+			display: none;
 		}
 
-		.slider-main{
-			margin-bottom: 10px;
-		}
-
-		.tipbar{
-			img{
-				width: 100%;
-				height: auto;
-			}
-		}
-
-		.banners-secundarios, 
-		.banners-terciarios{
-			.box-banner {
-				margin-bottom: 5px;
-
-				@include mq($screen-md) {
-					margin-bottom: 0;
-				}
-
-				img {
-				    height: auto;
-				    width: 100%;
-				}
-			}
-			
-		.banner-sec{
-			width: 50%;
-			height: auto;
-				img{
-					width: 100% !important;
-					height: auto !important;
-				}
-			@include mq($screen-md) {
-		    width: 25% !important;
-			height: auto !important;
-				img{
-					width: 100% !important;
-					height: auto !important;
-				}
-			}
-		}
-
-			.banner-terc{
-				width: 100%;
-				height: auto;
-				@include mq($screen-md) {
-			    width: 33.3%;
-				height: auto;
-				}
-			}
-		}
-
-		.banners-secundarios{
-			margin: 15px 0 5px;
-
-			@include mq($screen-md) {
-				margin: 15px 0 10px;
-			}
-		}
-
-		.banner-ult-one,
-		.banner-ult-two{
-		.box-banner{
-				img{
-					width: 100%;
-					height: auto;
-				}
-			}
-		}
-
-		.destaque-shelf{
-			margin: 3% 10px;
-
-			@include mq($screen-md) {
-				margin: 3% 0;
-			}
-
-			.prateleira{
-				h2{
-					display: none;
-				}
-
-				.slick-prev {
-					display: block;
-				    left: 10px;
-				    top: 140px;
-				    position: absolute;
-				    border: none;
-
-			    	&::after{
-					    content: ">";
-					    position: absolute;
-					    font-size: 38px;
-					    color: #000;
-					    font-family: monospace;
-			    	}
-
-			    	@include mq($screen-md) {
-						display: block;
-					    left: 10px;
-					    top: 140px;
-					    position: absolute;
-					    border: none;
-
-			    	&::after{
-					    content: ">";
-					    position: absolute;
-					    font-size: 38px;
-					    color: #000;
-					    font-family: monospace;
-			    		}
-			    	}
-				}
-
-				.slick-next {
-				    position: absolute;
-				    right: 10px;
-				    top: 140px;
-				    border:none;
-
-		    		&::after{
-					    content: ">";
-					    position: absolute;
-					    font-size: 38px;
-					    color: #000;
-					    font-family: monospace;
-					}
-
-			    	@include mq($screen-md) {
-					    position: absolute;
-					    right: 10px;
-					    top: 140px;
-					    border:none;
-
-		    		&::after{
-					    content: ">";
-					    position: absolute;
-					    font-size: 38px;
-					    color: #000;
-					    font-family: monospace;
-						}
-			    	}
-				}
-			}
-		}
-
-		.destaque-shelf.desk{
-			.prateleira{
-				ul{
-					li{
-						display: inline-block;
-						vertical-align: top;
-						width: 25%;
-					}
-				}
-			}
-		}
-
-		.about{
-			background: url(/arquivos/iniciais-logo.png) 95% center no-repeat #ececec;
-		    display: block;
-		    padding: 10% 3% 6%;
-
-		    @include mq($screen-md) {
-		    	padding: 3% 0 2%;
-		    }
-
-			article{
-				h2{
-					@include font-size(2.5);
-					margin-bottom: 15px;
-
-					@include mq($screen-md) {
-						@include font-size(3);
-					}
-
-					strong{
-						font-weight: 900;
-					}
-				}
-
-				p{
-					@include font-size(1.2);
+		.box-app {
+			&--wellcome-message {
+				@include font-size(1.4);
+				color: #fff;
+				padding-top: 30px;
+				text-align: center;
+				font-weight: normal;
+				
+				&--txt {
 					line-height: 20px;
-					margin-bottom: 15px;
+				}
+			}
+		}
 
-					@include mq($screen-md) {
-						@include font-size(1.4);
+		.user-choice-nav {
+			margin-top: 40px;
+			text-align: center;
+			&--list {
+				&--item {
+					margin-right: 10px;
+					display: inline-block;
+					vertical-align: middle;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&--link {
+						@include font-size(1.2);
+						@extend .transition;
+						width: 100px;
+						color: #fff;
+						padding: 10px;
+						display: block;
+						cursor: pointer;
+						line-height: 5px;
+						text-align: center;
+						border-radius: 20px;
+						border: 1px solid #fff;
+
+						&:hover {
+							@extend .transition;
+							background-color: #D9434D;
+						}
+					}
+				}
+			}
+		}
+
+		.msg-box {
+			margin-top: 40px;
+			text-align: center;
+
+			&--txt {
+				@include font-size(1.3);
+				line-height: 20px;
+
+				&:first-of-type {
+					color: #fff;
+				}
+
+				&:last-of-type {
+					@include font-size(1.5);
+				}
+			}
+		}
+
+		.benefits-box {
+			margin-top: 40px;
+			text-align: center;
+			padding-bottom: 40px;
+
+			&--list {
+				&--item {
+					width: 160px;
+					height: 160px;
+					position: relative;
+					margin-right: 25px;
+					display: inline-block;
+					vertical-align: middle;
+
+					&:last-child {
+						margin-right: 0;
+					}
+
+					&:before {
+						content: '';
+						opacity: 0.2;
+						width: 160px;
+						height: 160px;
+						display: block;
+						position: absolute;
+						border-radius: 10px;
+						background-color: #fff;
+					}
+
+					&--txt {
+						@include font-size(1);
+						color: #fff;
+						display: block;
+
+						&:first-of-type {
+							margin-bottom: 5px;
+						}
+					}
+
+					&--icon {
+						margin-top: 8px;
+						max-width: 100px;
+						margin-bottom: 10px;
+
+						path {
+							fill: #fff;
+						}
+					}
+				}
+			}
+		}
+
+		.alert {
+			@include font-size(2);
+			color: #fff;
+			display: none;
+			text-align: center;
+
+			&-success {
+				display: block;
+				padding: 15% 0;
+			}
+
+			svg {
+				top: -51px;
+				left: 70px;
+				z-index: 1;
+				max-width: 100px;
+				position: absolute;
+			}
+		}
+
+		.box-cad {
+			position: relative;
+
+			.formcad {
+				width: 90%;
+				margin: 0 auto;
+				padding: 20px 0;
+				overflow: hidden;
+
+				&--form-group {
+					margin-bottom: 10px;
+
+					&--txt {
+						display: block;
+					}
+
+					&--sel {
+						width: 100%;
+						height: 35px;
+					}
+	
+					&--bt {
+						@extend .transition;
+						width: 120px;
+						color: #fff;
+						padding: 10px;
+						cursor: pointer;
+						text-align: center;
+						border-radius: 10px;
+						background-color: #000;
+
+						&:hover {
+							@extend .transition;
+							background-color: #D9434D;
+						}
+					}
+
+					&--form-control {
+						width: 100%;
+						padding: 10px;
+						border-radius: 10px;
+						border: 1px solid #666;
+					}
+
+					&.cert-box {
+						padding: 10px;
+						border-radius: 10px;
+						background-color: #eaeaea;
+
+						label {
+							line-height: 17px;
+							margin-right: 5px;
+							font-weight: bold;
+							vertical-align: top;
+							display: inline-block;
+							text-transform: uppercase;
+						}
+					}
+
+					#file {
+						margin-bottom: 15px;
+						background-color: #eaeaea;
+					}
+					
+				}
+
+				p.text-center {
+					@include font-size(1.3);
+					padding: 10px;
+					color: #D9434D;
+					line-height: 21px;
+					text-align: center;
+					margin-bottom: 10px;
+					border-radius: 10px;
+					background-color: #eaeaea;
+				}
+			}
+		}
+
+		.box-login {
+			width: 320px;
+			height: 160px;
+			overflow: hidden;
+			margin: 100px auto;
+			position: relative;
+			padding: 20px 30px;
+
+			&--opacity {
+				top: 0;
+				left: 0;
+				z-index: 2;
+				width: 100%;
+				height: 100%;
+				opacity: 0.7;
+				position: absolute;
+				background-color: #fff;
+			}
+
+			&--closebt {
+				@include font-size(1.2);
+				top: 0;
+				right: 0;
+				width: 27px;
+				height: 20px;
+				z-index: 9999;
+				color: #fff;
+				cursor: pointer;
+				line-height: 20px;
+				position: absolute;
+				text-align: center;
+				margin-left: -100px;
+				background-color: #000;
+				text-transform: uppercase;
+			}
+
+			&--form {
+				z-index: 2;
+				width: 260px;
+				margin: 0 auto;
+				position: relative;
+
+				&--txt {
+					color: #000;
+					display: block;
+					margin-bottom: 10px;
+				}
+
+				&--input {
+					width: 100%;
+					padding: 10px;
+					margin-bottom: 10px;
+					border: 1px solid #ccc;
+				}
+
+				&--submit {
+					@extend .transition;
+					width: 100px;
+					border: none;
+					color: #fff;
+					padding: 10px;
+					cursor: pointer;
+					text-align: center;
+					background-color: #000;
+
+					&:hover {
+						@extend .transition;
+						background-color: #666;
 					}
 				}
 			}
 		}
 	}
 }
-
