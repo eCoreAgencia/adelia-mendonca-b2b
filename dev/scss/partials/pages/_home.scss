@@ -6,9 +6,27 @@ body {
 	&.homeb2b-adelia {
 		background: url(/arquivos/bg-home-b2b.png) no-repeat scroll 0 139px transparent;
 		background-size: contain;
-
+		
 		.hidden-box {
 			display: none;
+		}
+
+		.back-home {
+			@extend .transition;
+			left: 50%;
+			top: -20px;
+			color: #fff;
+			display: block;
+			cursor: pointer;
+			padding: 10px 20px;
+			position: absolute;
+			margin-left: -560px;
+			background-color: #000;
+
+			&:hover {
+				@extend .transition;
+				background-color: #777;
+			}
 		}
 
 		.box-app {
@@ -137,7 +155,6 @@ body {
 			text-align: center;
 
 			&-success {
-				display: block;
 				padding: 15% 0;
 			}
 
@@ -161,6 +178,12 @@ body {
 
 				&--form-group {
 					margin-bottom: 10px;
+
+					&:nth-child(11){
+						padding: 15px 20px;
+						border-radius: 10px;
+						background-color: #eaeaea;
+					}
 
 					&--txt {
 						display: block;
@@ -232,7 +255,6 @@ body {
 		.box-login {
 			width: 320px;
 			height: 160px;
-			overflow: hidden;
 			margin: 100px auto;
 			position: relative;
 			padding: 20px 30px;

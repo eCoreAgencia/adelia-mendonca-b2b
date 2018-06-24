@@ -235,6 +235,8 @@ header.menu-persistente,
 .modal .close-modal,
 .modal .close-modal:hover,
 .modal .modal-container,
+body.homeb2b-adelia .back-home,
+body.homeb2b-adelia .back-home:hover,
 body.homeb2b-adelia .user-choice-nav--list--item--link,
 body.homeb2b-adelia .user-choice-nav--list--item--link:hover,
 body.homeb2b-adelia .box-cad .formcad--form-group--bt,
@@ -1368,6 +1370,22 @@ body.homeb2b-adelia .hidden-box {
 	display: none;
 }
 
+body.homeb2b-adelia .back-home {
+	left: 50%;
+	top: -20px;
+	color: #fff;
+	display: block;
+	cursor: pointer;
+	padding: 10px 20px;
+	position: absolute;
+	margin-left: -560px;
+	background-color: #000;
+}
+
+body.homeb2b-adelia .back-home:hover {
+	background-color: #777;
+}
+
 body.homeb2b-adelia .box-app--wellcome-message {
 	font-size: 14px;
 	color: #fff;
@@ -1488,7 +1506,6 @@ body.homeb2b-adelia .alert {
 }
 
 body.homeb2b-adelia .alert-success {
-	display: block;
 	padding: 15% 0;
 }
 
@@ -1513,6 +1530,12 @@ body.homeb2b-adelia .box-cad .formcad {
 
 body.homeb2b-adelia .box-cad .formcad--form-group {
 	margin-bottom: 10px;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) {
+	padding: 15px 20px;
+	border-radius: 10px;
+	background-color: #eaeaea;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group--txt {
@@ -1579,7 +1602,6 @@ body.homeb2b-adelia .box-cad .formcad p.text-center {
 body.homeb2b-adelia .box-login {
 	width: 320px;
 	height: 160px;
-	overflow: hidden;
 	margin: 100px auto;
 	position: relative;
 	padding: 20px 30px;

@@ -10,7 +10,7 @@ $('#cad-bt').on('click', function(event){
 
 function insertConsulta() {
     var jsonSaveDadosUser = {
-        "email": $(".box-login--form--input").val()
+        "meuemail": $(".box-login--form--input").val()
     };
 
     var urlSaveDadosUser = 'https://adeliamendoncab2b.vtexcommercestable.com.br/api/dataentities/CC/documents/';
@@ -56,7 +56,7 @@ function loginUser() {
         var myEmail = data[0].email;
 
         if($(myEmail == singleMail)){
-            window.alert('Encontrei o e-mail '+myEmail+'');
+            insertConsulta();
         }
         
     }).fail(function(data) {

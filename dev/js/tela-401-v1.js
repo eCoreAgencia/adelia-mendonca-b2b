@@ -56,7 +56,7 @@ function loginUser() {
         var myEmail = data[0].email;
 
         if($(myEmail == singleMail)){
-            window.alert('Encontrei o e-mail '+myEmail+'');
+            insertConsulta();
         }
         
     }).fail(function(data) {
