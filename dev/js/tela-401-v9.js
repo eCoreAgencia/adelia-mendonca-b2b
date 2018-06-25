@@ -14,40 +14,16 @@ $('.back-home').on('click', function(event){
     $('.box-login').addClass('hidden-box');
 });
 
-function insertConsulta() {
-    var jsonSaveDadosUser = {
-        "meuemail": $(".box-login--form--input").val()
-    };
-
-    var urlSaveDadosUser = 'https://adeliamendoncab2b.vtexcommercestable.com.br/api/dataentities/CC/documents/';
-
-    $.ajax({
-        headers: {
-            'Accept': 'application/vnd.vtex.ds.v10+json',
-            'Content-Type': 'application/json',
-        },
-        data: JSON.stringify(jsonSaveDadosUser),
-        type: 'PATCH',
-        url: urlSaveDadosUser,
-        success: function (data) {
-          console.log(data);
-          $(".box-login--form--input").val('');
-        },
-        error: function (data) {
-          console.log(data);
-        }
-    });
-}
-
 function loginUser() {
     var emailUser = $('.box-login--form--input').val();
     var store = 'api';
     var name = 'CL';
     var singleMail = emailUser;
-    var fields = 'email='+emailUser+'';
+    var fields = 'categoria,approved,email';
+    var where = 'email='+emailUser+'';
     var urlProtocol = window.location.protocol;
-    var apiUrl = urlProtocol + '//adeliamendoncab2b.vtexcommercestable.com.br/' + store + '/dataentities/' + name + '/search?'+ fields;
-    console.log(apiUrl);
+
+    var apiUrl = urlProtocol + '//adeliamendoncab2b.vtexcommercestable.com.br/' + store + '/dataentities/' + name + '/search/?_fields='+ fields + '&_where=' + where;
 
     $.ajax({
         "headers": {
@@ -58,13 +34,20 @@ function loginUser() {
         "crossDomain": true,
         "type": "GET"
     }).success(function(data) {
-        console.log(this);
         var myEmail = data[0].email;
+        var approved = data[0].approved;
+        console.log(approved);
+        var categoria = data[0].categoria;
 
         if($(myEmail == singleMail)){
-            insertConsulta();
+            if(approved == true && categoria == 'PLF'){
+                window.location.href = '/?sc=2'; // Parametro URL Politica PLF
+            } else {
+                window.location.href = '/?sc=3'; // Parametro URL Politica Profissional
+            }
+        } else {
+            window.alert('Nao');
         }
-        
     }).fail(function(data) {
         window.alert('Ocorreu um erro ao buscar seu e-mail');
     });
