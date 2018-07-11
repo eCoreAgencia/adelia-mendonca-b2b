@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<title>Loja Adélia Mendonça Profissional - Cadastre-se e ganhe desconto em suas compras.</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" />
-        <link rel="stylesheet" href="/arquivos/ec-adelia-b2b-v3.css" />
+        <link rel="stylesheet" href="/arquivos/ec-adelia-b2b-v8.css" />
 	</head>
 	<body>
         <header>
@@ -94,7 +94,6 @@
 
                 <section class="box-cad hidden-box">
                     <div id="dadosprof">
-                        <span class="back-home">Voltar</span>
                         <div class="alert alert-success" id="messageSuccess" role="alert">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"><circle cx="25" cy="25" r="25" fill="#25ae88"/><path fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M38 15L22 33l-10-8"/></svg><br/>
                             <p>Seu pré-cadastro foi realizado com sucesso. Aguarde sua aprovação.</p>
@@ -135,7 +134,7 @@
                                 <select class="formcad--form-group--sel" id="cidade" name="cidade"></select>
                             </div>
                             <div class="formcad--form-group col-md-12">
-                                <label for="file">Certificado:</label>
+                                <label for="file">Selecione um arquivo</label>
                                 <input id="file" type="file" name="file" placeholder="selecione um arquivo" />
                                 <small class="formcad--form-group--txt text-muted">* Tamanho máximo do arquivo 5mb. * Tipos de arquivos suportados (jpg, png, pdf, doc).</small>
                                 <div id="progressBar" class="progress">
@@ -159,20 +158,21 @@
                             <div class="form-group col-md-12">
                                 <input type="hidden" id="token_rdstation" name="token_rdstation" value="db4190d0887b429e57707a9670f0337b" />
                                 <input type="hidden" id="identificador" name="identificador" value="Cadastro_Profissionais" />
-                                <button type="button" class="formcad--form-group--bt" onclick="sendCadastrar();" id="btnFinalizar">Finalizar cadastro</button> 
+                                <button type="button" class="formcad--form-group--bt" onclick="sendCadastrar();" id="btnFinalizar">Finalizar cadastro</button>
+                                <span class="back-home">Voltar</span>
                             </div>
                         </form>
                     </div>
                 </section>
 
                 <section class="box-login hidden-box">
-                    <span class="back-home">Voltar</span>
                     <div class="box-login--opacity"></div>
                     <span class="box-login--closebt">x</span>
                     <form action="javascript:loginUser()" method="GET" class="box-login--form">
                         <label class="box-login--form--txt">E-mail</label>
                         <input class="box-login--form--input" type="text" name="email-login" />
-                        <button type="submit" class="box-login--form--submit">Login</button>  
+                        <button type="submit" class="box-login--form--submit">Login</button>
+                        <span class="back-home">Voltar</span>
                     </form>
                 </section>
             </div>
@@ -232,7 +232,7 @@
         </footer>
 
         <script type="text/javascript" src="/arquivos/form-cad.js"></script>
-        <script type="text/javascript" src="/arquivos/tela-401-v9.js"></script>
+        <script type="text/javascript" src="/arquivos/tela-401-v10.js"></script>
         <script type="text/javascript" src="/arquivos/jquery.maskedinput.min.js"></script>
         <script type="text/javascript" src="/arquivos/jquery.validate.min.js"></script>
         <script type="text/javascript" src="/arquivos/cidades-estados-1.4-utf8.js"></script>

@@ -235,10 +235,12 @@ header.menu-persistente,
 .modal .close-modal,
 .modal .close-modal:hover,
 .modal .modal-container,
-body.homeb2b-adelia .back-home,
-body.homeb2b-adelia .back-home:hover,
 body.homeb2b-adelia .user-choice-nav--list--item--link,
 body.homeb2b-adelia .user-choice-nav--list--item--link:hover,
+body.homeb2b-adelia .box-cad .back-home,
+body.homeb2b-adelia .box-cad .back-home:hover,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label:hover,
 body.homeb2b-adelia .box-cad .formcad--form-group--bt,
 body.homeb2b-adelia .box-cad .formcad--form-group--bt:hover,
 body.homeb2b-adelia .box-login--form--submit,
@@ -633,6 +635,7 @@ header {
 header .logo--link--pic {
 	width: 100%;
 	height: auto;
+	padding: 10px 0;
 	max-width: 180px;
 }
 
@@ -1370,22 +1373,6 @@ body.homeb2b-adelia .hidden-box {
 	display: none;
 }
 
-body.homeb2b-adelia .back-home {
-	left: 50%;
-	top: -20px;
-	color: #fff;
-	display: block;
-	cursor: pointer;
-	padding: 10px 20px;
-	position: absolute;
-	margin-left: -560px;
-	background-color: #000;
-}
-
-body.homeb2b-adelia .back-home:hover {
-	background-color: #777;
-}
-
 body.homeb2b-adelia .box-app--wellcome-message {
 	font-size: 14px;
 	color: #fff;
@@ -1521,21 +1508,56 @@ body.homeb2b-adelia .box-cad {
 	position: relative;
 }
 
+body.homeb2b-adelia .box-cad .back-home {
+	color: #fff;
+	cursor: pointer;
+	padding: 10px 20px;
+	margin-left: 20px;
+	display: inline-block;
+	background-color: #000;
+}
+
+body.homeb2b-adelia .box-cad .back-home:hover {
+	background-color: #777;
+}
+
 body.homeb2b-adelia .box-cad .formcad {
 	width: 90%;
 	margin: 0 auto;
-	padding: 20px 0;
 	overflow: hidden;
+	padding: 40px 0 20px;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group {
+	height: 40px;
 	margin-bottom: 10px;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) {
-	padding: 15px 20px;
 	border-radius: 10px;
+	padding: 15px 20px 60px;
 	background-color: #eaeaea;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label {
+	width: 130px;
+	height: 30px;
+	color: #fff;
+	display: block;
+	cursor: pointer;
+	padding: 0 10px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 15px;
+	background-color: #000;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label:hover {
+	background-color: #666;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) #file {
+	display: none;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group--txt {
@@ -1545,6 +1567,8 @@ body.homeb2b-adelia .box-cad .formcad--form-group--txt {
 body.homeb2b-adelia .box-cad .formcad--form-group--sel {
 	width: 100%;
 	height: 35px;
+	border-radius: 5px;
+	background-color: #fff;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group--bt {
@@ -1564,7 +1588,7 @@ body.homeb2b-adelia .box-cad .formcad--form-group--bt:hover {
 body.homeb2b-adelia .box-cad .formcad--form-group--form-control {
 	width: 100%;
 	padding: 10px;
-	border-radius: 10px;
+	border-radius: 5px;
 	border: 1px solid #666;
 }
 
@@ -1581,11 +1605,6 @@ body.homeb2b-adelia .box-cad .formcad--form-group.cert-box label {
 	vertical-align: top;
 	display: inline-block;
 	text-transform: uppercase;
-}
-
-body.homeb2b-adelia .box-cad .formcad--form-group #file {
-	margin-bottom: 15px;
-	background-color: #eaeaea;
 }
 
 body.homeb2b-adelia .box-cad .formcad p.text-center {
@@ -4838,6 +4857,27 @@ td.visible-lg {
 
 .col-lg-offset-12 {
 	margin-left: 100%;
+}
+
+}
+
+@media (max-width: 780px) {
+
+footer {
+	text-align: center;
+	background-color: #000;
+}
+
+footer .dev-box--list {
+	text-align: center;
+}
+
+body.homeb2b-adelia {
+	background-size: cover;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) {
+	padding: 15px 20px 80px;
 }
 
 }

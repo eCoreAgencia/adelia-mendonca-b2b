@@ -6,27 +6,13 @@ body {
 	&.homeb2b-adelia {
 		background: url(/arquivos/bg-home-b2b.png) no-repeat scroll 0 139px transparent;
 		background-size: contain;
+
+		@media (max-width: 780px) {
+			background-size: cover;
+		}
 		
 		.hidden-box {
 			display: none;
-		}
-
-		.back-home {
-			@extend .transition;
-			left: 50%;
-			top: -20px;
-			color: #fff;
-			display: block;
-			cursor: pointer;
-			padding: 10px 20px;
-			position: absolute;
-			margin-left: -560px;
-			background-color: #000;
-
-			&:hover {
-				@extend .transition;
-				background-color: #777;
-			}
 		}
 
 		.box-app {
@@ -170,19 +156,62 @@ body {
 		.box-cad {
 			position: relative;
 
+			.back-home {
+				@extend .transition;
+				color: #fff;
+				cursor: pointer;
+				padding: 10px 20px;
+				margin-left: 20px;
+				display: inline-block;
+				background-color: #000;
+	
+				&:hover {
+					@extend .transition;
+					background-color: #777;
+				}
+			}
+
 			.formcad {
 				width: 90%;
 				margin: 0 auto;
-				padding: 20px 0;
 				overflow: hidden;
+				padding: 40px 0 20px;
 
 				&--form-group {
+					height: 40px;
 					margin-bottom: 10px;
 
 					&:nth-child(11){
-						padding: 15px 20px;
 						border-radius: 10px;
+						padding: 15px 20px 60px;
 						background-color: #eaeaea;
+
+						label {
+							@extend .transition;
+							width: 130px;
+							height: 30px;
+							color: #fff;
+							display: block;
+							cursor: pointer;
+							padding: 0 10px;
+							line-height: 30px;
+							text-align: center;
+							margin-bottom: 15px;
+							background-color: #000;
+						
+							&:hover {
+								@extend .transition;
+								background-color: #666;
+							}
+						}
+
+						#file {
+							display: none;
+						}
+
+						@media (max-width: 780px) {
+							padding: 15px 20px 80px;
+						}
 					}
 
 					&--txt {
@@ -192,6 +221,8 @@ body {
 					&--sel {
 						width: 100%;
 						height: 35px;
+						border-radius: 5px;
+						background-color: #fff;
 					}
 	
 					&--bt {
@@ -213,7 +244,7 @@ body {
 					&--form-control {
 						width: 100%;
 						padding: 10px;
-						border-radius: 10px;
+						border-radius: 5px;
 						border: 1px solid #666;
 					}
 
@@ -231,12 +262,6 @@ body {
 							text-transform: uppercase;
 						}
 					}
-
-					#file {
-						margin-bottom: 15px;
-						background-color: #eaeaea;
-					}
-					
 				}
 
 				p.text-center {
