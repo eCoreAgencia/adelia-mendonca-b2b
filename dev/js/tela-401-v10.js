@@ -14,6 +14,12 @@ $('.back-home').on('click', function(event){
     $('.box-login').addClass('hidden-box');
 });
 
+$('.box-login--closebt').on('click', function(event){
+    $('.box-app').removeClass('hidden-box');
+    $('.box-cad').addClass('hidden-box');
+    $('.box-login').addClass('hidden-box');  
+});
+
 function loginUser() {
     var emailUser = $('.box-login--form--input').val();
     var store = 'api';
@@ -36,7 +42,6 @@ function loginUser() {
     }).success(function(data) {
         var myEmail = data[0].email;
         var approved = data[0].approved;
-        console.log(approved);
         var categoria = data[0].categoria;
 
         if($(myEmail == singleMail)){

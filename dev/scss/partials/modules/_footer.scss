@@ -9,6 +9,11 @@ footer {
     padding-bottom: 28px;
 	border-top: 1px solid #eaeaea;
 
+	@media (max-width: 780px) {
+		text-align: center;
+		background-color: #000;
+	}
+
 	.copy-box {
 		color: #fff;
 		line-height: 58px;
@@ -17,6 +22,10 @@ footer {
 	.dev-box {
 		&--list {
 			text-align: right;
+
+			@media (max-width: 780px) {
+				text-align: center;
+			}
 
 			&--item {
 				margin-right: 10px;

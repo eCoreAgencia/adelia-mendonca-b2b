@@ -5,28 +5,18 @@
 body {
 	&.homeb2b-adelia {
 		background: url(/arquivos/bg-home-b2b.png) no-repeat scroll 0 139px transparent;
-		background-size: contain;
+		background-size: cover;
+
+		@media (max-width: 780px) {
+			background-size: cover;
+		}
 		
-		.hidden-box {
-			display: none;
+		.col-md-12 {
+			padding: 0;
 		}
 
-		.back-home {
-			@extend .transition;
-			left: 50%;
-			top: -20px;
-			color: #fff;
-			display: block;
-			cursor: pointer;
-			padding: 10px 20px;
-			position: absolute;
-			margin-left: -560px;
-			background-color: #000;
-
-			&:hover {
-				@extend .transition;
-				background-color: #777;
-			}
+		.hidden-box {
+			display: none;
 		}
 
 		.box-app {
@@ -148,7 +138,7 @@ body {
 			}
 		}
 
-		.alert {
+		.alert {  
 			@include font-size(2);
 			color: #fff;
 			display: none;
@@ -159,67 +149,178 @@ body {
 			}
 
 			svg {
-				top: -51px;
-				left: 70px;
-				z-index: 1;
+				margin: 15px 0;
 				max-width: 100px;
-				position: absolute;
 			}
 		}
 
 		.box-cad {
 			position: relative;
 
+			.back-home {
+				@extend .transition;
+				width: 120px;
+				color: #fff;
+				padding: 10px;
+				height: 35px;
+				cursor: pointer;
+				line-height: 17px;
+				margin-left: 10px;
+				text-align: center;
+				border-radius: 5px;
+				display: inline-block;
+				background-color: #666;
+				border: none;
+
+				&:hover {
+					@extend .transition;
+					background-color: #777;
+				}
+			}
+
+			#certificado-box {
+				margin: 0 0 15px;
+			}
+
+			#warning-box {
+				margin-bottom: 15px;
+			}
+
 			.formcad {
 				width: 90%;
 				margin: 0 auto;
-				padding: 20px 0;
 				overflow: hidden;
+				padding: 40px 0 20px;
 
 				&--form-group {
-					margin-bottom: 10px;
+					padding-left: 0;
+					min-height: 65px;
+					padding-right: 0;
+					margin-bottom: 20px;
+
+					label {
+						@include font-size(1.4);
+						color: #fff;
+						display: block;
+						margin-bottom: 10px;
+					}
+
+					&:nth-child(1),
+					&:nth-child(3),
+					&:nth-child(5),
+					&:nth-child(7),
+					&:nth-child(9) {
+						input,
+						select {
+							width: 98%;
+
+							@media (max-width: 993px) {
+								width: 100%;
+							}
+						}
+					}
 
 					&:nth-child(11){
-						padding: 15px 20px;
-						border-radius: 10px;
-						background-color: #eaeaea;
+						label {
+							@extend .transition;
+							color: #fff;
+							width: 130px;
+							height: 30px;
+							cursor: pointer;
+							padding: 0 10px;
+							line-height: 30px;
+							text-align: center;
+							margin-bottom: 15px;
+							display: inline-block;
+							background-color: #000;
+
+							&:hover {
+								@extend .transition;
+								background-color: #666;
+							}
+
+							&.no-style {
+								padding: 0;
+								width: auto;
+								height: 20px;
+								display: block;
+								cursor: default;
+								text-align: left;
+								background: none;
+
+								&:after {
+									content: '';
+									width: 101%;
+									height: 30px;
+									margin-top: 5px; 
+									display: inline-block;
+									background-color: #fff;
+									-webkit-border-top-right-radius: 5px;
+									-webkit-border-bottom-right-radius: 5px;
+									-moz-border-radius-topright: 5px;
+									-moz-border-radius-bottomright: 5px;
+									border-top-right-radius: 5px;
+									border-bottom-right-radius: 5px;
+								}
+
+								&:hover {
+									background: none;
+								}
+							}
+						}
+
+						#file {
+							display: none;
+						}
+
+						@media (max-width: 780px) {
+							padding: 15px 20px 80px;
+						}
 					}
 
 					&--txt {
 						display: block;
+
+						&.text-muted {
+							color: #fff;
+						}
 					}
 
 					&--sel {
 						width: 100%;
 						height: 35px;
+						border-radius: 5px;
+						background-color: #fff;
 					}
 	
 					&--bt {
 						@extend .transition;
-						width: 120px;
+						
 						color: #fff;
+						border: none;
+						width: 150px;
 						padding: 10px;
 						cursor: pointer;
 						text-align: center;
-						border-radius: 10px;
-						background-color: #000;
+						border-radius: 5px;
+						background-color: #d9534f;
 
 						&:hover {
 							@extend .transition;
-							background-color: #D9434D;
+							background-color: #000;
 						}
 					}
 
 					&--form-control {
 						width: 100%;
 						padding: 10px;
-						border-radius: 10px;
+						border-radius: 5px;
 						border: 1px solid #666;
 					}
 
 					&.cert-box {
 						padding: 10px;
-						border-radius: 10px;
+						border-radius: 5px;
 						background-color: #eaeaea;
 
 						label {
@@ -231,12 +332,6 @@ body {
 							text-transform: uppercase;
 						}
 					}
-
-					#file {
-						margin-bottom: 15px;
-						background-color: #eaeaea;
-					}
-					
 				}
 
 				p.text-center {
@@ -258,6 +353,27 @@ body {
 			margin: 100px auto;
 			position: relative;
 			padding: 20px 30px;
+
+			.back-home {
+				@extend .transition;
+				color: #fff;
+				width: 120px;
+				height: 34px;
+				padding: 10px;
+				cursor: pointer;
+				line-height: 16px;
+				margin-left: 15px;
+				text-align: center;
+				border-radius: 5px;
+				border: none;
+				display: inline-block;
+				background-color: #666;
+
+				&:hover {
+					@extend .transition;
+					background-color: #000;
+				}
+			}
 
 			&--opacity {
 				top: 0;
@@ -308,17 +424,17 @@ body {
 
 				&--submit {
 					@extend .transition;
-					width: 100px;
-					border: none;
+					width: 120px;
 					color: #fff;
 					padding: 10px;
 					cursor: pointer;
 					text-align: center;
-					background-color: #000;
+					border-radius: 5px;
+					background-color: #D9434D;
 
 					&:hover {
 						@extend .transition;
-						background-color: #666;
+						background-color: #000;
 					}
 				}
 			}

@@ -197,6 +197,10 @@ hr {
 	padding: 0;
 }
 
+select {
+	-webkit-appearance: menulist-button;
+}
+
 input,
 select {
 	vertical-align: middle;
@@ -235,12 +239,16 @@ header.menu-persistente,
 .modal .close-modal,
 .modal .close-modal:hover,
 .modal .modal-container,
-body.homeb2b-adelia .back-home,
-body.homeb2b-adelia .back-home:hover,
 body.homeb2b-adelia .user-choice-nav--list--item--link,
 body.homeb2b-adelia .user-choice-nav--list--item--link:hover,
+body.homeb2b-adelia .box-cad .back-home,
+body.homeb2b-adelia .box-cad .back-home:hover,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label:hover,
 body.homeb2b-adelia .box-cad .formcad--form-group--bt,
 body.homeb2b-adelia .box-cad .formcad--form-group--bt:hover,
+body.homeb2b-adelia .box-login .back-home,
+body.homeb2b-adelia .box-login .back-home:hover,
 body.homeb2b-adelia .box-login--form--submit,
 body.homeb2b-adelia .box-login--form--submit:hover,
 body.produto .product-view .buy-box .choose-skus .sku-selector-container ul li.skuList label,
@@ -304,7 +312,7 @@ body {
 .container {
 	width: 100%;
 	margin: 0 auto;
-	max-width: 1900px;
+	max-width: 1170px;
 }
 
 /* ==========================================================================
@@ -633,7 +641,8 @@ header {
 header .logo--link--pic {
 	width: 100%;
 	height: auto;
-	max-width: 180px;
+	padding: 20px 0;
+	max-width: 160px;
 }
 
 /* ==========================================================================
@@ -1363,27 +1372,15 @@ body.modal-active .modal {
 
 body.homeb2b-adelia {
 	background: url(/arquivos/bg-home-b2b.png) no-repeat scroll 0 139px transparent;
-	background-size: contain;
+	background-size: cover;
+}
+
+body.homeb2b-adelia .col-md-12 {
+	padding: 0;
 }
 
 body.homeb2b-adelia .hidden-box {
 	display: none;
-}
-
-body.homeb2b-adelia .back-home {
-	left: 50%;
-	top: -20px;
-	color: #fff;
-	display: block;
-	cursor: pointer;
-	padding: 10px 20px;
-	position: absolute;
-	margin-left: -560px;
-	background-color: #000;
-}
-
-body.homeb2b-adelia .back-home:hover {
-	background-color: #777;
 }
 
 body.homeb2b-adelia .box-app--wellcome-message {
@@ -1510,67 +1507,165 @@ body.homeb2b-adelia .alert-success {
 }
 
 body.homeb2b-adelia .alert svg {
-	top: -51px;
-	left: 70px;
-	z-index: 1;
+	margin: 15px 0;
 	max-width: 100px;
-	position: absolute;
 }
 
 body.homeb2b-adelia .box-cad {
 	position: relative;
 }
 
+body.homeb2b-adelia .box-cad .back-home {
+	width: 120px;
+	color: #fff;
+	padding: 10px;
+	height: 35px;
+	cursor: pointer;
+	line-height: 17px;
+	margin-left: 10px;
+	text-align: center;
+	border-radius: 5px;
+	display: inline-block;
+	background-color: #666;
+	border: none;
+}
+
+body.homeb2b-adelia .box-cad .back-home:hover {
+	background-color: #777;
+}
+
+body.homeb2b-adelia .box-cad #certificado-box {
+	margin: 0 0 15px;
+}
+
+body.homeb2b-adelia .box-cad #warning-box {
+	margin-bottom: 15px;
+}
+
 body.homeb2b-adelia .box-cad .formcad {
 	width: 90%;
 	margin: 0 auto;
-	padding: 20px 0;
 	overflow: hidden;
+	padding: 40px 0 20px;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group {
+	padding-left: 0;
+	min-height: 65px;
+	padding-right: 0;
+	margin-bottom: 20px;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group label {
+	font-size: 14px;
+	color: #fff;
+	display: block;
 	margin-bottom: 10px;
 }
 
-body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) {
-	padding: 15px 20px;
-	border-radius: 10px;
-	background-color: #eaeaea;
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(1) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(1) select,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(3) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(3) select,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(5) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(5) select,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(7) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(7) select,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(9) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(9) select {
+	width: 98%;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label {
+	color: #fff;
+	width: 130px;
+	height: 30px;
+	cursor: pointer;
+	padding: 0 10px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 15px;
+	display: inline-block;
+	background-color: #000;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label:hover {
+	background-color: #666;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label.no-style {
+	padding: 0;
+	width: auto;
+	height: 20px;
+	display: block;
+	cursor: default;
+	text-align: left;
+	background: none;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label.no-style:after {
+	content: '';
+	width: 101%;
+	height: 30px;
+	margin-top: 5px;
+	display: inline-block;
+	background-color: #fff;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label.no-style:hover {
+	background: none;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) #file {
+	display: none;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group--txt {
 	display: block;
 }
 
+body.homeb2b-adelia .box-cad .formcad--form-group--txt.text-muted {
+	color: #fff;
+}
+
 body.homeb2b-adelia .box-cad .formcad--form-group--sel {
 	width: 100%;
 	height: 35px;
+	border-radius: 5px;
+	background-color: #fff;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group--bt {
-	width: 120px;
 	color: #fff;
+	border: none;
+	width: 150px;
 	padding: 10px;
 	cursor: pointer;
 	text-align: center;
-	border-radius: 10px;
-	background-color: #000;
+	border-radius: 5px;
+	background-color: #d9534f;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group--bt:hover {
-	background-color: #D9434D;
+	background-color: #000;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group--form-control {
 	width: 100%;
 	padding: 10px;
-	border-radius: 10px;
+	border-radius: 5px;
 	border: 1px solid #666;
 }
 
 body.homeb2b-adelia .box-cad .formcad--form-group.cert-box {
 	padding: 10px;
-	border-radius: 10px;
+	border-radius: 5px;
 	background-color: #eaeaea;
 }
 
@@ -1581,11 +1676,6 @@ body.homeb2b-adelia .box-cad .formcad--form-group.cert-box label {
 	vertical-align: top;
 	display: inline-block;
 	text-transform: uppercase;
-}
-
-body.homeb2b-adelia .box-cad .formcad--form-group #file {
-	margin-bottom: 15px;
-	background-color: #eaeaea;
 }
 
 body.homeb2b-adelia .box-cad .formcad p.text-center {
@@ -1605,6 +1695,25 @@ body.homeb2b-adelia .box-login {
 	margin: 100px auto;
 	position: relative;
 	padding: 20px 30px;
+}
+
+body.homeb2b-adelia .box-login .back-home {
+	color: #fff;
+	width: 120px;
+	height: 34px;
+	padding: 10px;
+	cursor: pointer;
+	line-height: 16px;
+	margin-left: 15px;
+	text-align: center;
+	border-radius: 5px;
+	border: none;
+	display: inline-block;
+	background-color: #666;
+}
+
+body.homeb2b-adelia .box-login .back-home:hover {
+	background-color: #000;
 }
 
 body.homeb2b-adelia .box-login--opacity {
@@ -1656,17 +1765,17 @@ body.homeb2b-adelia .box-login--form--input {
 }
 
 body.homeb2b-adelia .box-login--form--submit {
-	width: 100px;
-	border: none;
+	width: 120px;
 	color: #fff;
 	padding: 10px;
 	cursor: pointer;
 	text-align: center;
-	background-color: #000;
+	border-radius: 5px;
+	background-color: #D9434D;
 }
 
 body.homeb2b-adelia .box-login--form--submit:hover {
-	background-color: #666;
+	background-color: #000;
 }
 
 /* ==========================================================================
@@ -4838,6 +4947,44 @@ td.visible-lg {
 
 .col-lg-offset-12 {
 	margin-left: 100%;
+}
+
+}
+
+@media (max-width: 993px) {
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(1) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(1) select,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(3) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(3) select,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(5) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(5) select,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(7) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(7) select,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(9) input,
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(9) select {
+	width: 100%;
+}
+
+}
+
+@media (max-width: 780px) {
+
+footer {
+	text-align: center;
+	background-color: #000;
+}
+
+footer .dev-box--list {
+	text-align: center;
+}
+
+body.homeb2b-adelia {
+	background-size: cover;
+}
+
+body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) {
+	padding: 15px 20px 80px;
 }
 
 }

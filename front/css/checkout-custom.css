@@ -88,6 +88,9 @@ hr {
   margin: 1em 0;
   padding: 0; }
 
+select {
+  -webkit-appearance: menulist-button; }
+
 input, select {
   vertical-align: middle; }
 
@@ -112,7 +115,7 @@ body {
 .container {
   width: 100%;
   margin: 0 auto;
-  max-width: 1900px; }
+  max-width: 1170px; }
 
 /* ==========================================================================
    Responsive: Utility classes

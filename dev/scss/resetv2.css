@@ -101,6 +101,10 @@ hr {
     padding:0;
 }
 
+select {
+    -webkit-appearance: menulist-button;
+}
+
 input, select {
     vertical-align:middle;
 }
