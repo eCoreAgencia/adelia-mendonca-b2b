@@ -19,7 +19,11 @@ $('.box-login--closebt').on('click', function(event){
     $('.box-cad').addClass('hidden-box');
     $('.box-login').addClass('hidden-box');  
 });
-
+$('.box-login--form--input').focus(function(){
+    if($('.form-error')[0]){
+        $('.form-error').remove();
+    }
+})
 function loginUser() {
     var emailUser = $('.box-login--form--input').val();
     var store = 'api';
@@ -40,6 +44,18 @@ function loginUser() {
         "crossDomain": true,
         "type": "GET"
     }).success(function(data) {
+        console.log(data);
+
+        if(data.length < 1){
+            $('<span class="form-error"> Usuário não cadastrado</span>').insertAfter('.box-login--form--input');
+            setTimeout(function(){
+                $('.box-login').addClass('hidden-box'); 
+                $('.box-cad').removeClass('hidden-box');
+                $('.form-error').remove();
+            }, 2000)
+            return false;
+        }
+
         var myEmail = data[0].email;
         var approved = data[0].approved;
         var categoria = data[0].categoria;
@@ -51,9 +67,10 @@ function loginUser() {
                 window.location.href = '/?sc=3'; // Parametro URL Politica Profissional
             }
         } else {
-            window.alert('Nao');
+            $('<span class="form-error"> Usuário não cadastrado</span>').insertAfter('.box-login--form--input');
+            
         }
     }).fail(function(data) {
-        window.alert('Ocorreu um erro ao buscar seu e-mail');
+        $('<span class="form-error"> Usuário não cadastrado</span>').insertAfter('.box-login--form--input');
     });
 }
