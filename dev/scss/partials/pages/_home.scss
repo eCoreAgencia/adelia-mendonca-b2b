@@ -4,7 +4,7 @@
 
 body {
 	&.homeb2b-adelia {
-		background: url(/arquivos/bg-home-b2b.png) no-repeat scroll 0 139px transparent;
+		background: url(/arquivos/bg-home-b2b.png) no-repeat scroll center 139px transparent;
 		background-size: cover;
 
 		@media (max-width: 780px) {
@@ -92,17 +92,18 @@ body {
 			padding-bottom: 40px;
 
 			&--list {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+
 				&--item {
 					width: 160px;
 					height: 160px;
 					position: relative;
-					margin-right: 25px;
+					margin: 10px;
 					display: inline-block;
 					vertical-align: middle;
-
-					&:last-child {
-						margin-right: 0;
-					}
 
 					&:before {
 						content: '';

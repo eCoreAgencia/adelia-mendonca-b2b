@@ -1371,7 +1371,7 @@ body.modal-active .modal {
    ========================================================================== */
 
 body.homeb2b-adelia {
-	background: url(/arquivos/bg-home-b2b.png) no-repeat scroll 0 139px transparent;
+	background: url(/arquivos/bg-home-b2b.png) no-repeat scroll center 139px transparent;
 	background-size: cover;
 }
 
@@ -1451,17 +1451,24 @@ body.homeb2b-adelia .benefits-box {
 	padding-bottom: 40px;
 }
 
+body.homeb2b-adelia .benefits-box--list {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	-ms-flex-align: center;
+	    align-items: center;
+}
+
 body.homeb2b-adelia .benefits-box--list--item {
 	width: 160px;
 	height: 160px;
 	position: relative;
-	margin-right: 25px;
+	margin: 10px;
 	display: inline-block;
 	vertical-align: middle;
-}
-
-body.homeb2b-adelia .benefits-box--list--item:last-child {
-	margin-right: 0;
 }
 
 body.homeb2b-adelia .benefits-box--list--item:before {
@@ -3695,6 +3702,13 @@ body.produto.kit #selecao_sku_kit .opcao-kit .sku-selector-container ul li.skuLi
 
 .txt-red {
 	color: #D9434D;
+}
+
+.form-error {
+	display: block;
+	padding: 5px;
+	color: red;
+	margin-top: -10px;
 }
 
 @media (min-width: 480px) {
