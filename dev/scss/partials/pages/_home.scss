@@ -225,7 +225,7 @@ body {
 						label {
 							@extend .transition;
 							color: #fff;
-							width: 130px;
+							width: auto;
 							height: 30px;
 							cursor: pointer;
 							padding: 0 10px;
@@ -296,6 +296,7 @@ body {
 	
 					&--bt {
 						@extend .transition;
+						
 						
 						color: #fff;
 						border: none;
@@ -439,6 +440,14 @@ body {
 					}
 				}
 			}
+		}
+
+		div#progressBarValue {
+			height: 20px;
+			background: green;
+			-webkit-transition: width 1s;
+			transition: width 1s;
+			margin: 10px 0;
 		}
 	}
 }

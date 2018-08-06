@@ -9,3 +9,4 @@ $(document).ready(function(){
         var changeVal = $(this).attr('value', myVal+'?sc=2');
     });
 });
+

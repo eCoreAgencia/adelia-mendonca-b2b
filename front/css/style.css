@@ -1585,7 +1585,7 @@ body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(9) select {
 
 body.homeb2b-adelia .box-cad .formcad--form-group:nth-child(11) label {
 	color: #fff;
-	width: 130px;
+	width: auto;
 	height: 30px;
 	cursor: pointer;
 	padding: 0 10px;
@@ -1783,6 +1783,13 @@ body.homeb2b-adelia .box-login--form--submit {
 
 body.homeb2b-adelia .box-login--form--submit:hover {
 	background-color: #000;
+}
+
+body.homeb2b-adelia div#progressBarValue {
+	height: 20px;
+	background: green;
+	transition: width 1s;
+	margin: 10px 0;
 }
 
 /* ==========================================================================

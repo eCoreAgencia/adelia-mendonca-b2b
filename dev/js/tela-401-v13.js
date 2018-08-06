@@ -74,3 +74,19 @@ function loginUser() {
         $('<span class="form-error"> Usuário não cadastrado</span>').insertAfter('.box-login--form--input');
     });
 }
+
+$('#file').on('change', function(){
+	var file = document.getElementById('file').files[0];
+
+    // Process only if file is valid (uploaded)
+    if (file) {
+		$('#certificado-box .file-name').text(file.name);
+      // Access file name
+      console.log(file.name);
+    }
+})
+
+
+
+
+
